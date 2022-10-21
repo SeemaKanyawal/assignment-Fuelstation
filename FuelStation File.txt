@@ -1,0 +1,29 @@
+class FuelStation:
+    
+    def __init__(self, diesel, petrol, electric):
+        self.sp = [0,diesel,petrol,electric]
+        
+    def fuel_vehicle(self,str_fuelType):
+        self.str_fuelType="diesel"
+        self.str_fuelType="petrol"
+        self.str_fuelType="electric"
+        
+    def open_fuel_slot(self, fuelType):
+        if(self.sp[fuelType] >0 ):
+            self.sp[fuelType] -= 1
+            return True
+        return False
+
+fuel_station = FuelStation(2, 0, 1)
+fuel_station.open_fuel_slot(2)
+#fuel_station.fuel_vehicle("diesel")
+# print(fuel_station.open_fuel_slot(3))
+# print(fuel_station.open_fuel_slot(2))
+# print(fuel_station.open_fuel_slot(3))
+# print(fuel_station.open_fuel_slot(1))
+# print(fuel_station.open_fuel_slot(1))
+# print(fuel_station.open_fuel_slot(1))
+# constructor(diesel,petrol,electric) − This constructor is taking the number of slots available for different spaces and initializes object of the FuelStation class.
+# open_fuel_slot(fuelType) − This method checks whether there is a vehicle space of given fuelType for the vehicle .
+# The three slots diesel,petrol,electric are represented by int values. The constraint is a fueltype can only give in a slot space if fuelType is matched. If there is no space available, return false, otherwise fuel the vehicle in that space and return true.
+# If there are 2 slots for diesel, no slot for petrol and 1 slot for electric, then constructor call will be like fuelStation(2, 0, 1), and if we call open_fuel_slot like −(2,0,1).It gives true and false response.
